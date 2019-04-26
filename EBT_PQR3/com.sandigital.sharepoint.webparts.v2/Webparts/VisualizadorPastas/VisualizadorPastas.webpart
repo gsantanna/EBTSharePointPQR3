@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="com.sandigital.sharepoint.webparts.v2.Webparts.VisualizadorPastas.VisualizadorPastas, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Visualizador Pastas de Bibliotecas</property>
+        <property name="Description" type="string">Utilize esta webpart para visualizar bibliotecas de documentos com a navegação de pastas</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

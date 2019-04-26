@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="com.sandigital.sharepoint.webparts.v2.Webparts.AgrupadoraPastas.AgrupadoraPastas, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Agrupador de Pastas de Biblioteca</property>
+        <property name="Description" type="string">Utilize essa webpart para visualizar bibliotecas com drill down</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

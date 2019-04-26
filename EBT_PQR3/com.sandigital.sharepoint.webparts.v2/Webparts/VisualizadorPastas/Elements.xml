@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="VisualizadorPastas" List="113" Url="_catalogs/wp">
+    <File Path="VisualizadorPastas\VisualizadorPastas.webpart" Url="com.sandigital.sharepoint.webparts.v2_VisualizadorPastas.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+</Elements>

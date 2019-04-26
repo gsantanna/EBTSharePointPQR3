@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4288D09-4514-4D25-95AF-A7FEC471F48F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.sandigital.sharepoint.webparts.v2</RootNamespace>
+    <AssemblyName>com.sandigital.sharepoint.webparts.v2</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\Users\_svc_SQL\Desktop\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Componentes\spsWrapper.cs" />
+    <Compile Include="ControlTemplates\com.sandigital.sharepoint.webparts.v2\SubmenuComunidades.ascx.cs">
+      <DependentUpon>SubmenuComunidades.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\com.sandigital.sharepoint.webparts.v2\SubmenuComunidades.ascx.designer.cs">
+      <DependentUpon>SubmenuComunidades.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Webparts\AgrupadoraPastas\AgrupadoraPastas.ascx.cs">
+      <DependentUpon>AgrupadoraPastas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\AgrupadoraPastas\AgrupadoraPastas.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgrupadoraPastas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\AgrupadoraPastas\AgrupadorPastasModel.cs" />
+    <Compile Include="Webparts\Alertas\Alertas.ascx.cs">
+      <DependentUpon>Alertas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\Alertas\Alertas.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alertas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\VisualizadorPastas\VisualizadorPastas.ascx.cs">
+      <DependentUpon>VisualizadorPastas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\VisualizadorPastas\VisualizadorPastas.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VisualizadorPastas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\VisualizadorPastas\VisualizadorPastasModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ControlTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7220f6c7-628a-4c1b-8188-161d1e3c0f25}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{ac476c1d-2752-487b-a2c0-bf965f1ddb1c}</FeatureId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f883cbc3-71fa-415e-ae57-e37c10099706}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f233cb8d-9519-432c-8211-70a99ca557af}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{600dff2f-e319-4df3-8ba4-7266ac45ded0}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Webparts\AgrupadoraPastas\AgrupadoraPastas.webpart" />
+    <None Include="Webparts\AgrupadoraPastas\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{48e293e2-ca40-4447-9dfc-4fb11e1757eb}</SharePointProjectItemId>
+    </None>
+    <None Include="Webparts\Alertas\Alertas.webpart" />
+    <None Include="Webparts\Alertas\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5594d624-7898-4799-bd2c-931218fad2a6}</SharePointProjectItemId>
+    </None>
+    <None Include="Webparts\VisualizadorPastas\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{874c796c-33af-44e6-b9c1-b83966b0421a}</SharePointProjectItemId>
+    </None>
+    <None Include="Webparts\VisualizadorPastas\VisualizadorPastas.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Layouts\com.sandigital.sharepoint.webparts.v2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ControlTemplates\com.sandigital.sharepoint.webparts.v2\SubmenuComunidades.ascx" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="Images\com.sandigital.sharepoint.webparts.v2\corner_left_alertas.png" />
+    <Content Include="Images\com.sandigital.sharepoint.webparts.v2\RedArrow.png" />
+    <Content Include="Webparts\AgrupadoraPastas\AgrupadoraPastas.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>AgrupadoraPastas.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="Webparts\AgrupadoraPastas\Elements.xml" />
+    <Content Include="Webparts\Alertas\Alertas.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>Alertas.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="Webparts\Alertas\Elements.xml" />
+    <Content Include="Webparts\VisualizadorPastas\Elements.xml" />
+    <Content Include="Webparts\VisualizadorPastas\VisualizadorPastas.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>VisualizadorPastas.ascx.g.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>
